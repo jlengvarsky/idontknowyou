@@ -1,16 +1,29 @@
 {
-  "name": "free-radish-client",
-  "version": "0.1.0",
-  "description": "A web-server to handle free-radish compatible games and run the client side of them",
-  "main": "index.js",
+  "name": "bad-cards-game",
+  "version": "1.0.0",
+  "description": "Bad Cards Game",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "install:web": "cd web && npm i",
+    "install:server": "cd server && npm i",
+    "install": "npm-run-all install:*",
+    "build:web": "cd web && npm run build",
+    "build:server": "cd server && npm run build",
+    "build": "npm-run-all build:*",
+    "start:web": "cd web && npm run start",
+    "start:server": "cd server && npm run start:prod",
+    "start": "npm-run-all --parallel start:*"
   },
-  "author": "nickvv",
-  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/epavanello/bad-cards-web.git"
+  },
+  "author": "Pavanello Emanuele <pavanello.emanuele@gmail.com> (http://pava.me)",
+  "license": "AGPL-3.0-only",
+  "bugs": {
+    "url": "https://github.com/epavanello/bad-cards-web/issues"
+  },
+  "homepage": "https://github.com/epavanello/bad-cards-web#readme",
   "dependencies": {
-    "express": "^4.17.1",
-    "ws": "^7.2.1"
+    "npm-run-all": "^4.1.5"
   }
 }
